@@ -41,3 +41,8 @@ On the project, sample scenarios and configurations are inside `test` folder.
 ### Sample Report generated from json file
 ![dash sample report gui](sample-report-gui.png)
 
+### Examples
+Check `test` folder, sample usage and examples will be regularly updated there.
+
+### Contribution
+All Ideas and development are welcome.
