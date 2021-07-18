@@ -1,0 +1,56 @@
+
+#A list of services is declared at this section
+#data needed includes:
+#- service name
+# -tag -plain or url encoded
+# -headers - if there is a specific header to that service
+# - method - api method to access the resource
+services:
+  - name: reqres-users
+    tag: plain
+    developer: d-gopher
+    tester: d-gopher-test
+    method: get
+
+#more information to add to test, for reporting sake.
+metadata:
+  project: reqres-users-dummy-project
+  environment: reqres-users-test
+  collection: reqres-users-collection
+  domain: Test-department
+
+#fields to be hidden in the final report
+maskedfields:
+  Authorization: "hidden field"
+
+
+#shared headers needed by all services.
+headers:
+  Content-Type: application/json
+
+#An initialization function that can be used to generate authorization token before test starts
+#Other init functions that can exist include.
+#1. db call - to setup test data
+#2. external api call
+#3. etc
+
+#N.B can be easily added in the app, the important thing to know is the initial and final variables, source and target.
+# then those ca be picked later during testing,
+
+#set active true or false to disable
+initfunc:
+  active: false
+  action: generate_access_token
+  alias: access_token
+  getvalue: access_token
+  targetvalue: Authorization
+  url: "acces token url"
+  method: post
+  headers:
+    Content-Type: "application/json, or the desired content type."
+    Authorization: "mode of auth needed to access this endpoint"
+
+
+#variables that can be used inside the test.yaml file.
+data:
+  base_url: https://reqres.in

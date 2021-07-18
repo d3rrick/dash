@@ -1,0 +1,32 @@
+[
+ {
+  "scenario": "Validate user details",
+  "scenario_id": "SN-0-c3q35e06n88hcbrcelo0",
+  "tag": "plain",
+  "service": "reqres-users",
+  "status": 200,
+  "severity": "",
+  "priority": "",
+  "url": "https://reqres.in/api/users",
+  "method": "GET",
+  "request_body": "",
+  "headers": "{'Content-Type':'application/json'}",
+  "project": "reqres-users-dummy-project",
+  "domain": "Test-department",
+  "environment": "reqres-users-test",
+  "collection": "reqres-users-collection",
+  "validators": "[{{page == 1}} {{per_page == 6}} {{total == 12}} {{total_pages == 2}} {{data.0.id == 1}} {{data.0.email == george.bluth@reqres.in}} {{data.0.first_name == George}} {{data.0.last_name == Bluth}} {{data.0.avatar == https://reqres.in/img/faces/1-image.jpg}}]",
+  "run_id": "2021-07-18T16:55:04_b7c55c2a-b082-4f67-88d1-713d48c3f208",
+  "execution_time": "2021-07-18 16:55:05",
+  "error_description": "",
+  "response_code": 200,
+  "response_body": "{'page':1,'per_page':6,'total':12,'total_pages':2,'data':[{'id':1,'email':'george.bluth@reqres.in','first_name':'George','last_name':'Bluth','avatar':'https://reqres.in/img/faces/1-image.jpg'},{'id':2,'email':'janet.weaver@reqres.in','first_name':'Janet','last_name':'Weaver','avatar':'https://reqres.in/img/faces/2-image.jpg'},{'id':3,'email':'emma.wong@reqres.in','first_name':'Emma','last_name':'Wong','avatar':'https://reqres.in/img/faces/3-image.jpg'},{'id':4,'email':'eve.holt@reqres.in','first_name':'Eve','last_name':'Holt','avatar':'https://reqres.in/img/faces/4-image.jpg'},{'id':5,'email':'charles.morris@reqres.in','first_name':'Charles','last_name':'Morris','avatar':'https://reqres.in/img/faces/5-image.jpg'},{'id':6,'email':'tracey.ramos@reqres.in','first_name':'Tracey','last_name':'Ramos','avatar':'https://reqres.in/img/faces/6-image.jpg'}],'support':{'url':'https://reqres.in/#support-heading','text':'To keep ReqRes free, contributions towards server costs are appreciated!'}}",
+  "response_time": 0.665912843,
+  "total_pass": 10,
+  "total_fail": 0,
+  "validation_description": "Passed -- Expected  200==200\nPassed -- Expected  '1' == '1'\nPassed -- Expected  '6' == '6'\nPassed -- Expected  '12' == '12'\nPassed -- Expected  '2' == '2'\nPassed -- Expected  '1' == '1'\nPassed -- Expected  'george.bluth@reqres.in' == 'george.bluth@reqres.in'\nPassed -- Expected  'George' == 'George'\nPassed -- Expected  'Bluth' == 'Bluth'\nPassed -- Expected  'https://reqres.in/img/faces/1-image.jpg' == 'https://reqres.in/img/faces/1-image.jpg'\n",
+  "outcome": "passed",
+  "developer": "d-gopher",
+  "tester": "d-gopher-test"
+ }
+]

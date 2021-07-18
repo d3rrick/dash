@@ -1,0 +1,16 @@
+- scenario: Validate user details
+  service: reqres-users
+  url: "{{base_url}}/api/users"
+  method: get
+  status: 200
+  replicas: 1
+  validators:
+    - validate: {extract: "page", "comparator": "==" , "expected": "1"}
+    - validate: {extract: "per_page", "comparator": "==" , "expected": "6"}
+    - validate: {extract: "total", "comparator": "==" , "expected": "12"}
+    - validate: {extract: "total_pages", "comparator": "==" , "expected": "2"}
+    - validate: {extract: "data.0.id", "comparator": "==" , "expected": "1"}
+    - validate: {extract: "data.0.email", "comparator": "==" , "expected": "george.bluth@reqres.in"}
+    - validate: {extract: "data.0.first_name", "comparator": "==" , "expected": "George"}
+    - validate: {extract: "data.0.last_name", "comparator": "==" , "expected": "Bluth"}
+    - validate: {extract: "data.0.avatar", "comparator": "==" , "expected": "https://reqres.in/img/faces/1-image.jpg"}

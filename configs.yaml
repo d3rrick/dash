@@ -1,0 +1,2 @@
+#proxy: "http://ip:port/"
+#noproxy: "list of comma seperated ip addresses,,,,"
