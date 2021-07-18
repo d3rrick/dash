@@ -2,10 +2,10 @@
 package main
 
 import (
-	"com.tester/cmd"
-	app "com.tester/utils"
 	"flag"
 	"fmt"
+	"github.com/derrick-gopher/dash/cmd"
+	app "github.com/derrick-gopher/dash/utils"
 	"github.com/kyokomi/emoji/v2"
 	uuid "github.com/satori/go.uuid"
 	log "github.com/sirupsen/logrus"

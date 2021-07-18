@@ -1,4 +1,4 @@
-module com.tester
+module github.com/derrick-gopher/dash
 
 go 1.16
 
